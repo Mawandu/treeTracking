@@ -1,0 +1,43 @@
+.qr-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 20px 0;
+}
+
+.qr-container h4 {
+    margin-top: 0;
+    color: #667eea;
+}
+
+.qr-code {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.btn-download-qr {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-download-qr:hover {
+    background: #5568d3;
+}
+
+.qr-info {
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
