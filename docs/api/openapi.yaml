@@ -1,0 +1,626 @@
+openapi: 3.0.3
+info:
+  title: TreeTracking API
+  description: API de traçabilité forestière basée sur Hyperledger Fabric et IPFS
+  version: 2.0.0
+  contact:
+    name: Mawandu Hamba Heritier
+    email: support@treetracking.com
+
+servers:
+  - url: http://localhost:3000
+    description: Development server
+
+tags:
+  - name: ForestryAuthority
+    description: Opérations Autorité Forestière
+  - name: LoggingCompany
+    description: Opérations Entreprise Exploitante
+  - name: BuyingCompany
+    description: Opérations Entreprise Acheteuse
+  - name: Admin
+    description: Administration réseau
+  - name: Query
+    description: Requêtes lecture seule
+  - name: IPFS
+    description: Gestion fichiers IPFS
+
+paths:
+  /api/forestry/initializeLog:
+    post:
+      tags: [ForestryAuthority]
+      summary: Initialiser une grume
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [logID, species, origin]
+              properties:
+                logID:
+                  type: string
+                  example: "LOG001"
+                species:
+                  type: string
+                  example: "Sapelli"
+                origin:
+                  type: string
+                  example: "Forêt de Yangambi"
+      responses:
+        '200':
+          description: Log initialisé
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+
+  /api/forestry/validateOrigin:
+    post:
+      tags: [ForestryAuthority]
+      summary: Valider l'origine
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [logID]
+              properties:
+                logID:
+                  type: string
+      responses:
+        '200':
+          description: Origine validée
+
+  /api/forestry/issuePermit:
+    post:
+      tags: [ForestryAuthority]
+      summary: Émettre un permis
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [logID, permitID, expiryDate]
+              properties:
+                logID:
+                  type: string
+                permitID:
+                  type: string
+                  example: "PERMIT-001"
+                expiryDate:
+                  type: string
+                  format: date-time
+                  example: "2025-12-31T23:59:59Z"
+      responses:
+        '200':
+          description: Permis émis
+
+  /api/forestry/issueLicense:
+    post:
+      tags: [ForestryAuthority]
+      summary: Émettre une licence (v2.0)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [licenseID, companyMSP, totalCubage, expiryDate]
+              properties:
+                licenseID:
+                  type: string
+                  example: "LIC-2025-001"
+                companyMSP:
+                  type: string
+                  enum: [LoggingCompaniesMSP, BuyingCompaniesMSP]
+                totalCubage:
+                  type: number
+                  example: 1000
+                  description: "Volume total autorisé en m³"
+                expiryDate:
+                  type: string
+                  format: date-time
+      responses:
+        '200':
+          description: Licence émise
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  licenseID:
+                    type: string
+
+  /api/license/{licenseID}:
+    get:
+      tags: [Query]
+      summary: Consulter une licence (v2.0)
+      parameters:
+        - name: licenseID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Détails de la licence
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    $ref: '#/components/schemas/License'
+
+  /api/logging/declareHarvest:
+    post:
+      tags: [LoggingCompany]
+      summary: Déclarer la coupe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [logID]
+              properties:
+                logID:
+                  type: string
+      responses:
+        '200':
+          description: Coupe déclarée
+
+  /api/logging/addPhysicalData:
+    post:
+      tags: [LoggingCompany]
+      summary: Ajouter données physiques
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [logID, dimensions, weight, quality, marking]
+              properties:
+                logID:
+                  type: string
+                dimensions:
+                  type: string
+                  example: "400x50x50cm"
+                weight:
+                  type: number
+                  example: 1200
+                quality:
+                  type: string
+                  enum: [A, B, C]
+                marking:
+                  type: string
+                  example: "MARK-123"
+      responses:
+        '200':
+          description: Données ajoutées
+
+  /api/logging/uploadMultimedia:
+    post:
+      tags: [LoggingCompany]
+      summary: Associer hash IPFS
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [logID, ipfsHash, metadata]
+              properties:
+                logID:
+                  type: string
+                ipfsHash:
+                  type: string
+                  example: "QmXXX..."
+                metadata:
+                  type: object
+      responses:
+        '200':
+          description: Multimédia enregistré
+
+  /api/logging/updateTransport:
+    post:
+      tags: [LoggingCompany]
+      summary: Mettre à jour transport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [logID, status]
+              properties:
+                logID:
+                  type: string
+                status:
+                  type: string
+                  example: "En route vers Kinshasa"
+      responses:
+        '200':
+          description: Transport mis à jour
+
+  /api/buying/validatePurchase:
+    post:
+      tags: [BuyingCompany]
+      summary: Valider un achat
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [logID, buyerID, price, currency]
+              properties:
+                logID:
+                  type: string
+                buyerID:
+                  type: string
+                  example: "BUYER-001"
+                price:
+                  type: number
+                  example: 15000
+                currency:
+                  type: string
+                  enum: [USD, EUR, CDF]
+      responses:
+        '200':
+          description: Achat validé
+
+  /api/buying/transferOwnership:
+    post:
+      tags: [BuyingCompany]
+      summary: Transférer propriété (v2.0)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [logID, newBuyerID, price, currency]
+              properties:
+                logID:
+                  type: string
+                newBuyerID:
+                  type: string
+                  example: "BUYER-002"
+                price:
+                  type: number
+                currency:
+                  type: string
+      responses:
+        '200':
+          description: Propriété transférée
+
+  /api/buying/verifyCompliance/{logID}:
+    get:
+      tags: [BuyingCompany]
+      summary: Vérifier conformité
+      parameters:
+        - name: logID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Résultat conformité
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+                    properties:
+                      compliant:
+                        type: boolean
+                      logID:
+                        type: string
+
+  /api/logs/{logID}:
+    get:
+      tags: [Query]
+      summary: Obtenir historique complet
+      parameters:
+        - name: logID
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: msp
+          in: query
+          schema:
+            type: string
+            default: TreeTrackingAdminMSP
+      responses:
+        '200':
+          description: Historique complet
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    $ref: '#/components/schemas/TreeLog'
+
+  /api/admin/emergencyFreeze:
+    post:
+      tags: [Admin]
+      summary: Geler le réseau (v2.0)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [reason]
+              properties:
+                reason:
+                  type: string
+                  example: "Audit en cours"
+      responses:
+        '200':
+          description: Réseau gelé
+
+  /api/admin/unfreezeNetwork:
+    post:
+      tags: [Admin]
+      summary: Dégeler le réseau (v2.0)
+      responses:
+        '200':
+          description: Réseau dégelé
+
+  /api/admin/networkState:
+    get:
+      tags: [Admin]
+      summary: État du réseau (v2.0)
+      responses:
+        '200':
+          description: État actuel
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    $ref: '#/components/schemas/NetworkState'
+
+  /api/ipfs/upload:
+    post:
+      tags: [IPFS]
+      summary: Upload fichier vers IPFS
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Fichier uploadé
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  ipfsHash:
+                    type: string
+                  size:
+                    type: number
+                  gatewayUrl:
+                    type: string
+
+  /api/ipfs/{hash}:
+    get:
+      tags: [IPFS]
+      summary: Récupérer fichier depuis IPFS
+      parameters:
+        - name: hash
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fichier
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+
+  /health:
+    get:
+      tags: [Query]
+      summary: Health check
+      responses:
+        '200':
+          description: API fonctionnelle
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  timestamp:
+                    type: string
+
+components:
+  schemas:
+    SuccessResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+
+    TreeLog:
+      type: object
+      properties:
+        logID:
+          type: string
+        species:
+          type: string
+        origin:
+          type: string
+        status:
+          type: string
+          enum: [INITIALIZED, PERMITTED, HARVESTED, TRANSPORTED, SOLD]
+        createdBy:
+          type: string
+        createdAt:
+          type: string
+        originValidated:
+          type: boolean
+        permit:
+          $ref: '#/components/schemas/HarvestPermit'
+        physicalData:
+          $ref: '#/components/schemas/PhysicalData'
+        multimediaData:
+          type: array
+          items:
+            $ref: '#/components/schemas/MultimediaData'
+        transportStatus:
+          type: string
+        purchase:
+          $ref: '#/components/schemas/Purchase'
+        history:
+          type: array
+          items:
+            $ref: '#/components/schemas/HistoryEntry'
+
+    HarvestPermit:
+      type: object
+      properties:
+        permitID:
+          type: string
+        logID:
+          type: string
+        issuedBy:
+          type: string
+        issuedAt:
+          type: string
+        expiryDate:
+          type: string
+        isRevoked:
+          type: boolean
+
+    PhysicalData:
+      type: object
+      properties:
+        dimensions:
+          type: string
+        weight:
+          type: number
+        quality:
+          type: string
+        marking:
+          type: string
+        addedBy:
+          type: string
+        addedAt:
+          type: string
+
+    MultimediaData:
+      type: object
+      properties:
+        ipfsHash:
+          type: string
+        metadata:
+          type: object
+        uploadedBy:
+          type: string
+        uploadedAt:
+          type: string
+
+    Purchase:
+      type: object
+      properties:
+        buyerID:
+          type: string
+        price:
+          type: number
+        currency:
+          type: string
+        isCompliant:
+          type: boolean
+        validatedBy:
+          type: string
+        validatedAt:
+          type: string
+
+    HistoryEntry:
+      type: object
+      properties:
+        action:
+          type: string
+        actor:
+          type: string
+        timestamp:
+          type: string
+        description:
+          type: string
+
+    License:
+      type: object
+      properties:
+        licenseID:
+          type: string
+        companyMSP:
+          type: string
+        totalCubage:
+          type: number
+        remainingCubage:
+          type: number
+        expiryDate:
+          type: string
+        issuedAt:
+          type: string
+        issuedBy:
+          type: string
+        logIDs:
+          type: array
+          items:
+            type: string
+        isRevoked:
+          type: boolean
+
+    NetworkState:
+      type: object
+      properties:
+        isFrozen:
+          type: boolean
+        reason:
+          type: string
+        frozenAt:
+          type: string
+        frozenBy:
+          type: string

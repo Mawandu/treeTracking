@@ -1,0 +1,66 @@
+{
+    "name": "treetracking-network",
+    "version": "1.0.0",
+    "client": {
+        "organization": "TreeTrackingAdminMSP",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "channels": {
+        "treetrackingchannel": {
+            "orderers": [
+                "orderer.treetracking.com"
+            ],
+            "peers": {
+                "peer0.admin.treetracking.com": {}
+            }
+        }
+    },
+    "organizations": {
+        "TreeTrackingAdminMSP": {
+            "mspid": "TreeTrackingAdminMSP",
+            "peers": [
+                "peer0.admin.treetracking.com"
+            ],
+            "certificateAuthorities": [
+                "ca.admin.treetracking.com"
+            ]
+        }
+    },
+    "orderers": {
+        "orderer.treetracking.com": {
+            "url": "grpc://localhost:7050",
+            "grpcOptions": {
+                "ssl-target-name-override": "orderer.treetracking.com"
+            },
+            "tlsCACerts": {
+                "path": "../crypto-config/ordererOrganizations/treetracking.com/tlsca/tlsca.treetracking.com-cert.pem"
+            }
+        }
+    },
+    "peers": {
+        "peer0.admin.treetracking.com": {
+            "url": "grpc://localhost:7051",
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.admin.treetracking.com"
+            },
+            "tlsCACerts": {
+                "path": "../crypto-config/peerOrganizations/admin.treetracking.com/tlsca/tlsca.admin.treetracking.com-cert.pem"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.admin.treetracking.com": {
+            "url": "http://localhost:7054",
+            "caName": "ca.admin.treetracking.com",
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

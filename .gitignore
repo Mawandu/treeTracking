@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+
+# Fabric crypto materials (sensible)
+crypto-config/
+channel-artifacts/
+
+# Wallet identities (sensible)
+api-server/wallet/
+
+# Build artifacts
+build/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+
+# Docker volumes
+data/
+
+# Backup files
+*.backup
+*.bak
+
+# IPFS data
+.ipfs/

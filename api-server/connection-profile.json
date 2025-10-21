@@ -1,0 +1,96 @@
+{
+  "name": "treetracking-network",
+  "version": "1.0.0",
+  "client": {
+    "organization": "TreeTrackingAdminMSP",
+    "connection": {
+      "timeout": {
+        "peer": { "endorser": "300" },
+        "orderer": "300"
+      }
+    }
+  },
+  "channels": {
+    "treetrackingchannel": {
+      "orderers": ["orderer.treetracking.com"],
+      "peers": {
+        "peer0.admin.treetracking.com": {
+          "endorsingPeer": true,
+          "chaincodeQuery": true,
+          "ledgerQuery": true,
+          "eventSource": true
+        },
+        "peer0.forestryauthority.treetracking.com": {
+          "endorsingPeer": true,
+          "chaincodeQuery": true,
+          "ledgerQuery": true,
+          "eventSource": true
+        },
+        "peer0.loggingcompany.treetracking.com": {
+          "endorsingPeer": true,
+          "chaincodeQuery": true,
+          "ledgerQuery": true,
+          "eventSource": true
+        },
+        "peer0.buyingcompany.treetracking.com": {
+          "endorsingPeer": true,
+          "chaincodeQuery": true,
+          "ledgerQuery": true,
+          "eventSource": true
+        }
+      }
+    }
+  },
+  "organizations": {
+    "TreeTrackingAdminMSP": {
+      "mspid": "TreeTrackingAdminMSP",
+      "peers": ["peer0.admin.treetracking.com"]
+    },
+    "ForestryAuthorityMSP": {
+      "mspid": "ForestryAuthorityMSP",
+      "peers": ["peer0.forestryauthority.treetracking.com"]
+    },
+    "LoggingCompaniesMSP": {
+      "mspid": "LoggingCompaniesMSP",
+      "peers": ["peer0.loggingcompany.treetracking.com"]
+    },
+    "BuyingCompaniesMSP": {
+      "mspid": "BuyingCompaniesMSP",
+      "peers": ["peer0.buyingcompany.treetracking.com"]
+    }
+  },
+  "orderers": {
+    "orderer.treetracking.com": {
+      "url": "grpc://localhost:7050",
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer.treetracking.com"
+      }
+    }
+  },
+  "peers": {
+    "peer0.admin.treetracking.com": {
+      "url": "grpc://localhost:7051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.admin.treetracking.com"
+      }
+    },
+    "peer0.forestryauthority.treetracking.com": {
+      "url": "grpc://localhost:9051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.forestryauthority.treetracking.com"
+      }
+    },
+    "peer0.loggingcompany.treetracking.com": {
+      "url": "grpc://localhost:11051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.loggingcompany.treetracking.com"
+      }
+    },
+    "peer0.buyingcompany.treetracking.com": {
+      "url": "grpc://localhost:13051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.buyingcompany.treetracking.com"
+      }
+    }
+  }
+}

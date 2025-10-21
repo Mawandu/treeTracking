@@ -1,0 +1,5 @@
+# Backend
+echo "12" > ~/treesystems/api-server/.nvmrc
+
+# Frontend
+echo "16" > ~/treesystems/treetracking-web/.nvmrc

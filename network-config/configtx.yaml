@@ -1,0 +1,205 @@
+---
+Organizations:
+    - &OrdererOrg
+        Name: OrdererOrg
+        ID: OrdererMSP
+        MSPDir: ../crypto-config/ordererOrganizations/treetracking.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('OrdererMSP.member')"
+            Writers:
+                Type: Signature
+                Rule: "OR('OrdererMSP.member')"
+            Admins:
+                Type: Signature
+                Rule: "OR('OrdererMSP.admin')"
+
+    - &TreeTrackingAdminMSP
+        Name: TreeTrackingAdminMSP
+        ID: TreeTrackingAdminMSP
+        MSPDir: ../crypto-config/peerOrganizations/admin.treetracking.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('TreeTrackingAdminMSP.admin', 'TreeTrackingAdminMSP.peer', 'TreeTrackingAdminMSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('TreeTrackingAdminMSP.admin', 'TreeTrackingAdminMSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('TreeTrackingAdminMSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('TreeTrackingAdminMSP.peer')"
+        AnchorPeers:
+            - Host: peer0.admin.treetracking.com
+              Port: 7051
+
+    - &ForestryAuthorityMSP
+        Name: ForestryAuthorityMSP
+        ID: ForestryAuthorityMSP
+        MSPDir: ../crypto-config/peerOrganizations/forestryauthority.treetracking.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('ForestryAuthorityMSP.admin', 'ForestryAuthorityMSP.peer', 'ForestryAuthorityMSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('ForestryAuthorityMSP.admin', 'ForestryAuthorityMSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('ForestryAuthorityMSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('ForestryAuthorityMSP.peer')"
+        AnchorPeers:
+            - Host: peer0.forestryauthority.treetracking.com
+              Port: 9051
+
+    - &LoggingCompaniesMSP
+        Name: LoggingCompaniesMSP
+        ID: LoggingCompaniesMSP
+        MSPDir: ../crypto-config/peerOrganizations/loggingcompany.treetracking.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('LoggingCompaniesMSP.admin', 'LoggingCompaniesMSP.peer', 'LoggingCompaniesMSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('LoggingCompaniesMSP.admin', 'LoggingCompaniesMSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('LoggingCompaniesMSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('LoggingCompaniesMSP.peer')"
+        AnchorPeers:
+            - Host: peer0.loggingcompany.treetracking.com
+              Port: 11051
+
+    - &BuyingCompaniesMSP
+        Name: BuyingCompaniesMSP
+        ID: BuyingCompaniesMSP
+        MSPDir: ../crypto-config/peerOrganizations/buyingcompany.treetracking.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('BuyingCompaniesMSP.admin', 'BuyingCompaniesMSP.peer', 'BuyingCompaniesMSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('BuyingCompaniesMSP.admin', 'BuyingCompaniesMSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('BuyingCompaniesMSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('BuyingCompaniesMSP.peer')"
+        AnchorPeers:
+            - Host: peer0.buyingcompany.treetracking.com
+              Port: 13051
+
+Capabilities:
+    Channel: &ChannelCapabilities
+        V1_4_3: true
+        V1_3: false
+        V1_1: false
+
+    Orderer: &OrdererCapabilities
+        V1_4_2: true
+        V1_1: false
+
+    Application: &ApplicationCapabilities
+        V1_4_2: true
+        V1_3: false
+        V1_2: false
+        V1_1: false
+
+Application: &ApplicationDefaults
+    Organizations:
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+        LifecycleEndorsement:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Endorsement"
+        Endorsement:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Endorsement"
+    Capabilities:
+        <<: *ApplicationCapabilities
+
+Orderer: &OrdererDefaults
+    OrdererType: solo
+    Addresses:
+        - orderer.treetracking.com:7050
+    BatchTimeout: 2s
+    BatchSize:
+        MaxMessageCount: 10
+        AbsoluteMaxBytes: 99 MB
+        PreferredMaxBytes: 512 KB
+    Organizations:
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+        BlockValidation:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+
+Channel: &ChannelDefaults
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+    Capabilities:
+        <<: *ChannelCapabilities
+
+Profiles:
+    TreeTrackingGenesis:
+        <<: *ChannelDefaults
+        Orderer:
+            <<: *OrdererDefaults
+            Organizations:
+                - *OrdererOrg
+            Capabilities:
+                <<: *OrdererCapabilities
+        Consortiums:
+            TreeTrackingConsortium:
+                Organizations:
+                    - *TreeTrackingAdminMSP
+                    - *ForestryAuthorityMSP
+                    - *LoggingCompaniesMSP
+                    - *BuyingCompaniesMSP
+
+    TreeTrackingChannel:
+        Consortium: TreeTrackingConsortium
+        <<: *ChannelDefaults
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *TreeTrackingAdminMSP
+                - *ForestryAuthorityMSP
+                - *LoggingCompaniesMSP
+                - *BuyingCompaniesMSP
+            Capabilities:
+                <<: *ApplicationCapabilities

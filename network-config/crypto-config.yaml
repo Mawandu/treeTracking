@@ -1,0 +1,38 @@
+OrdererOrgs:
+  - Name: Orderer
+    Domain: treetracking.com
+    Specs:
+      - Hostname: orderer
+
+PeerOrgs:
+  - Name: TreeTrackingAdminMSP
+    Domain: admin.treetracking.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+
+  - Name: ForestryAuthorityMSP
+    Domain: forestryauthority.treetracking.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+
+  - Name: LoggingCompaniesMSP
+    Domain: loggingcompany.treetracking.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+
+  - Name: BuyingCompaniesMSP
+    Domain: buyingcompany.treetracking.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+    Users:
+      Count: 1
