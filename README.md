@@ -137,7 +137,7 @@ Projet académique - VNU International School
 ## 📞 Contact
 
 - GitHub: [@Mawandu](https://github.com/Mawandu)
-- Email: mawandu.heritier@vnu.edu.vn
+- Email: heritiermawandu@yahoo.fr
 
 ---
 
