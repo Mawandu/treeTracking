@@ -1,10 +1,10 @@
-# Architecture TreeTracking v2.0
+# Architecture TreeTracking
 
 ## 1. Vue d'ensemble
 
 ### Schéma Architecture Globale
 cat << 'EOF' > architecture/ARCHITECTURE.md
-# Architecture TreeTracking v2.0
+# Architecture TreeTracking
 
 ## 1. Vue d'ensemble
 
@@ -32,7 +32,7 @@ cat << 'EOF' > architecture/ARCHITECTURE.md
 | peer0.loggingcompany | LoggingCompaniesMSP | 11051 | Exploitation |
 | peer0.buyingcompany | BuyingCompaniesMSP | 13051 | Achat/Vente |
 
-**Chaincode v2.0**
+**Chaincode**
 - Langage: Go
 - Fonctions: 18 (12 v1 + 6 v2)
 - Endorsement: OR policy par fonction
@@ -54,10 +54,10 @@ api-server/
 └── package.json
 
 **Endpoints (18 au total)**
-- Forestry: 5 endpoints (3 v1 + 2 v2)
+- Forestry: 5 endpoints
 - Logging: 4 endpoints
-- Buying: 4 endpoints (3 v1 + 1 v2)
-- Admin: 3 endpoints (v2)
+- Buying: 4 endpoints 
+- Admin: 3 endpoints 
 - IPFS: 2 endpoints
 
 ### 2.3 IPFS Layer
