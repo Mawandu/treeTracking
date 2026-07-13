@@ -1,12 +1,12 @@
-# 🌳 TreeTracking v2.0
+# TreeTracking
 
 Système de traçabilité et reconnaissance des bois basé sur la Blockchain Hyperledger Fabric et IPFS.
 
-## 📋 Description
+## Description
 
 TreeTracking est une plateforme de traçabilité forestière permettant de suivre l'origine, l'exploitation, le transport et l'achat de grumes de bois de manière transparente et immuable.
 
-## 🏗️ Architecture
+## Architecture
 
 - **Blockchain**: Hyperledger Fabric 1.4
 - **Storage**: IPFS (InterPlanetary File System)
@@ -14,29 +14,25 @@ TreeTracking est une plateforme de traçabilité forestière permettant de suivr
 - **Frontend**: React 18
 - **Database**: CouchDB
 
-## 🚀 Fonctionnalités v2.0
+## Fonctionnalités
+- Initialisation des grumes
+- Validation d'origine
+- Émission de permis
+- Déclaration d'exploitation
+- Données physiques
+- Upload multimédia IPFS
+- Suivi transport
+- Validation d'achat
+- Historique complet
+- Vérification conformité
+- Gestion des licences avec quotas
+- Transfert de propriété
+- Gel d'urgence du réseau
+- État du réseau
+- Dashboard statistiques
+- Export PDF et QR Code
 
-### Version 1.0 (12 fonctions)
-- ✅ Initialisation des grumes
-- ✅ Validation d'origine
-- ✅ Émission de permis
-- ✅ Déclaration d'exploitation
-- ✅ Données physiques
-- ✅ Upload multimédia IPFS
-- ✅ Suivi transport
-- ✅ Validation d'achat
-- ✅ Historique complet
-- ✅ Vérification conformité
-
-### Version 2.0 (6 nouvelles fonctions)
-- ✅ Gestion des licences avec quotas
-- ✅ Transfert de propriété
-- ✅ Gel d'urgence du réseau
-- ✅ État du réseau
-- ✅ Dashboard statistiques
-- ✅ Export PDF et QR Code
-
-## 📦 Structure du Projet
+## Structure du Projet
 ```
 treesystems/
 ├── api-server/          # API REST Node.js
@@ -47,7 +43,7 @@ treesystems/
 └── tests/               # Tests unitaires et E2E
 ```
 
-## 🔧 Installation
+## Installation
 
 ### Prérequis
 
@@ -73,7 +69,7 @@ cd treeTracking
 ./stop-treetracking.sh
 ```
 
-## 🌐 Services
+## Services
 
 | Service | URL | Description |
 |---------|-----|-------------|
@@ -82,19 +78,19 @@ cd treeTracking
 | IPFS Gateway | http://localhost:8080 | Passerelle IPFS |
 | Documentation | http://localhost:8000 | Docs techniques |
 
-## 👥 Organisations (MSP)
+## Organisations (MSP)
 
 1. **ForestryAuthorityMSP** - Autorité forestière
 2. **LoggingCompaniesMSP** - Entreprises d'exploitation
 3. **BuyingCompaniesMSP** - Entreprises acheteuses
 4. **TreeTrackingAdminMSP** - Administrateur réseau
 
-## 📊 Cycle de vie d'une grume
+## Cycle de vie d'une grume
 ```
 INITIALIZED → PERMITTED → HARVESTED → TRANSPORTED → SOLD
 ```
 
-## 🧪 Tests
+## Tests
 ```bash
 # Tests chaincode
 cd chaincode/treetracking
@@ -108,14 +104,14 @@ npm test
 ./run-e2e-tests.sh
 ```
 
-## 📚 Documentation
+## Documentation
 
 - [Architecture Technique](docs/architecture.md)
 - [Guide API](docs/api-guide.md)
 - [Spécifications Chaincode](docs/chaincode-specs.md)
 - [Glossaire](docs/glossaire.md)
 
-## 🔒 Sécurité
+## Sécurité
 
 - Blockchain privée et permissionnée
 - Authentification MSP (X.509)
@@ -123,7 +119,7 @@ npm test
 - Gel d'urgence du réseau
 - Audit trail complet
 
-## 🤝 Contribution
+## Contribution
 
 Auteur: **Mawandu Hamba Heritier**  
 Encadrant: **Dr. HO Tuong Vinh**  
@@ -141,4 +137,4 @@ Projet académique - VNU International School
 
 ---
 
-**TreeTracking v2.0** - Traçabilité Forestière sur Blockchain
+**TreeTracking** - Traçabilité Forestière sur Blockchain
