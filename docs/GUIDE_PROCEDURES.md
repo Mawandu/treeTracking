@@ -1,4 +1,4 @@
-# Guide des Procédures TreeTracking v2.0
+# Guide des Procédures TreeTracking
 
 ## 🌲 1. ForestryAuthority (Autorité Forestière)
 
@@ -94,7 +94,7 @@
 3. Rechercher n'importe quel Log ID
 4. Voir tous les historiques
 
-#### B. Gel d'urgence (NOUVEAU v2.0)
+#### B. Gel d'urgence
 1. Section "Network Control"
 2. Status actuel : ACTIVE
 3. Freeze Reason (ex: "Audit en cours")
