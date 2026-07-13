@@ -1,4 +1,4 @@
-# TreeTracking v2.0 - Documentation Technique
+# TreeTracking - Documentation Technique
 
 ## Table des matières
 
