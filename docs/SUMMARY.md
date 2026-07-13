@@ -1,4 +1,4 @@
-# Documentation TreeTracking v2.0 - Résumé
+# Documentation TreeTracking - Résumé
 
 ## Vue d'ensemble
 
