@@ -1,4 +1,4 @@
-# Scripts de gestion TreeTracking v2.0
+# Scripts de gestion TreeTracking
 
 ## Démarrage complet
 ```bash
