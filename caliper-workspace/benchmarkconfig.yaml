@@ -1,0 +1,2245 @@
+test:
+  workers:
+    type: local
+    number: 1
+  rounds:
+    - label: InitializeLog-load1-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load1-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load1-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load1-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load1-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load1-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load1-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load1-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load1-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load1-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load5-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load10-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: InitializeLog-load20-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/initializeLog.js
+    - label: DeclareHarvest-load1-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load1-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load1-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load1-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load1-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load1-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load1-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load1-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load1-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load1-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load5-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load10-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: DeclareHarvest-load20-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/declareHarvest.js
+    - label: AddPhysicalData-load1-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load1-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load1-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load1-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load1-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load1-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load1-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load1-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load1-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load1-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load5-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load10-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: AddPhysicalData-load20-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/addPhysicalData.js
+    - label: UploadMultimedia-load1-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load1-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load1-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load1-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load1-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load1-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load1-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load1-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load1-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load1-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load5-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load10-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: UploadMultimedia-load20-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/uploadMultimedia.js
+    - label: ValidatePurchase-load1-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load1-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load1-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load1-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load1-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load1-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load1-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load1-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load1-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load1-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load5-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load10-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: ValidatePurchase-load20-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/validatePurchase.js
+    - label: GetLogHistory-load1-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load1-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load1-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load1-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load1-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load1-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load1-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load1-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load1-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load1-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load5-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load10-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: GetLogHistory-load20-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/getLogHistory.js
+    - label: VerifyCompliance-load1-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load1-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load1-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load1-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load1-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load1-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load1-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load1-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load1-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load1-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 1
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load5-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 5
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load10-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 10
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep1
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep2
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep3
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep4
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep5
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep6
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep7
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep8
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep9
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js
+    - label: VerifyCompliance-load20-rep10
+      txDuration: 60
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 20
+      workload:
+        module: workloads/verifyCompliance.js

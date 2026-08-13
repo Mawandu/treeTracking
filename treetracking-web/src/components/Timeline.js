@@ -3,27 +3,27 @@ import './Timeline.css';
 
 function Timeline({ history }) {
     if (!history || history.length === 0) {
-        return <div className="timeline-empty">Aucun événement</div>;
+        return <div className="timeline-empty">Aucun evenement</div>;
     }
 
     const getIcon = (action) => {
         const icons = {
-            'INITIALIZED': '🌱',
-            'ORIGIN_VALIDATED': '✅',
-            'PERMIT_ISSUED': '📜',
-            'HARVEST_DECLARED': '🪓',
-            'PHYSICAL_DATA_ADDED': '📏',
-            'MULTIMEDIA_UPLOADED': '📸',
-            'TRANSPORT_UPDATED': '🚚',
-            'PURCHASE_VALIDATED': '💰',
-            'OWNERSHIP_TRANSFERRED': '🔄'
+            'INITIALIZED': 'INIT',
+            'ORIGIN_VALIDATED': 'VALID',
+            'PERMIT_ISSUED': 'PERMIT',
+            'HARVEST_DECLARED': 'HARVEST',
+            'PHYSICAL_DATA_ADDED': 'DATA',
+            'MULTIMEDIA_UPLOADED': 'MEDIA',
+            'TRANSPORT_UPDATED': 'TRANSPORT',
+            'PURCHASE_VALIDATED': 'PURCHASE',
+            'OWNERSHIP_TRANSFERRED': 'TRANSFER'
         };
-        return icons[action] || '📌';
+        return icons[action] || 'EVENT';
     };
 
     return (
         <div className="timeline-container">
-            <h3>Timeline des événements</h3>
+            <h3>Timeline des evenements</h3>
             <div className="timeline">
                 {history.map((entry, idx) => (
                     <div key={idx} className="timeline-item">

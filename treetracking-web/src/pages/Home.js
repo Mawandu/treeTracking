@@ -9,29 +9,29 @@ function Home() {
         {
             name: 'Forestry Authority',
             msp: 'ForestryAuthorityMSP',
-            description: 'Valider l\'origine et émettre des permis',
-            icon: '🌳',
+            description: 'Valider l\'origine et emettre des permis',
+            icon: 'FA',
             color: '#2ecc71'
         },
         {
             name: 'Logging Company',
             msp: 'LoggingCompaniesMSP',
-            description: 'Déclarer l\'exploitation et gérer le transport',
-            icon: '🪓',
+            description: 'Declarer l\'exploitation et gerer le transport',
+            icon: 'LC',
             color: '#e67e22'
         },
         {
             name: 'Buying Company',
             msp: 'BuyingCompaniesMSP',
-            description: 'Vérifier la conformité et acheter',
-            icon: '🏢',
+            description: 'Verifier la conformite et acheter',
+            icon: 'BC',
             color: '#3498db'
         },
         {
             name: 'Admin',
             msp: 'TreeTrackingAdminMSP',
-            description: 'Consulter et auditer le réseau',
-            icon: '⚙️',
+            description: 'Consulter et auditer le reseau',
+            icon: 'AD',
             color: '#95a5a6'
         }
     ];
@@ -39,8 +39,8 @@ function Home() {
     return (
         <div className="home-container">
             <header className="hero">
-                <h1>🌲 TreeTracking</h1>
-                <p>Plateforme de traçabilité forestière basée sur Blockchain</p>
+                <h1>TreeTracking</h1>
+                <p>Plateforme de tracabilite forestiere basee sur Blockchain</p>
             </header>
 
             <div className="organizations-grid">
@@ -61,27 +61,27 @@ function Home() {
             </div>
 
             <div className="info-section">
-                <h2>À propos de TreeTracking</h2>
+                <h2>A propos de TreeTracking</h2>
                 <p>
                     TreeTracking utilise la technologie blockchain Hyperledger Fabric 
-                    et IPFS pour assurer une traçabilité complète et transparente 
-                    du bois, de la forêt au produit fini.
+                    et IPFS pour assurer une tracabilite complete et transparente 
+                    du bois, de la foret au produit fini.
                 </p>
                 <div className="features">
                     <div className="feature">
-                        <span>🔒</span>
-                        <h4>Sécurisé</h4>
-                        <p>Données immuables sur blockchain</p>
+                        <span>S</span>
+                        <h4>Securise</h4>
+                        <p>Donnees immuables sur blockchain</p>
                     </div>
                     <div className="feature">
-                        <span>🔍</span>
+                        <span>T</span>
                         <h4>Transparent</h4>
                         <p>Historique complet consultable</p>
                     </div>
                     <div className="feature">
-                        <span>✅</span>
-                        <h4>Certifié</h4>
-                        <p>Conformité FSC/PEFC</p>
+                        <span>C</span>
+                        <h4>Certifie</h4>
+                        <p>Conformite FSC/PEFC</p>
                     </div>
                 </div>
             </div>

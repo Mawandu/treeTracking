@@ -8,8 +8,8 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:3001',
-    credentials: true
+    origin: '*',
+    credentials: false
 }));
 
 app.use(express.json());
@@ -18,7 +18,7 @@ const PORT = 3000;
 const channelName = 'treetrackingchannel';
 const chaincodeName = 'treetracking';
 
-// Helper function pour vérifier freeze
+
 async function checkNetworkFrozen() {
     const gateway = new Gateway();
     try {
@@ -46,15 +46,15 @@ async function checkNetworkFrozen() {
     }
 }
 
-// Middleware pour bloquer si réseau gelé
+
 async function freezeCheckMiddleware(req, res, next) {
-    // Routes admin toujours autorisées
+
     const adminRoutes = ['/api/admin/unfreezeNetwork', '/api/admin/networkState', '/health'];
     if (adminRoutes.includes(req.path)) {
         return next();
     }
 
-    // Vérifier si route API métier
+
     if (req.path.startsWith('/api/') && !req.path.startsWith('/api/admin')) {
         try {
             const state = await checkNetworkFrozen();
@@ -68,7 +68,7 @@ async function freezeCheckMiddleware(req, res, next) {
                 });
             }
         } catch (error) {
-            // En cas d'erreur, laisser passer
+
             console.log('Freeze check error:', error.message);
         }
     }
@@ -76,7 +76,7 @@ async function freezeCheckMiddleware(req, res, next) {
     next();
 }
 
-// Appliquer middleware freeze
+
 app.use(freezeCheckMiddleware);
 
 async function executeTransaction(mspId, functionName, ...args) {
@@ -131,7 +131,7 @@ async function queryTransaction(mspId, functionName, ...args) {
     }
 }
 
-// FORESTRY AUTHORITY ROUTES
+
 app.post('/api/forestry/initializeLog', async (req, res) => {
     try {
         const { logID, species, origin } = req.body;
@@ -181,7 +181,7 @@ app.get('/api/license/:licenseID', async (req, res) => {
     }
 });
 
-// LOGGING COMPANY ROUTES
+
 app.post('/api/logging/declareHarvest', async (req, res) => {
     try {
         const { logID } = req.body;
@@ -222,7 +222,7 @@ app.post('/api/logging/updateTransport', async (req, res) => {
     }
 });
 
-// BUYING COMPANY ROUTES
+
 app.post('/api/buying/validatePurchase', async (req, res) => {
     try {
         const { logID, buyerID, price, currency } = req.body;
@@ -253,7 +253,7 @@ app.post('/api/buying/transferOwnership', async (req, res) => {
     }
 });
 
-// QUERY ROUTES
+
 app.get('/api/logs/:logID', async (req, res) => {
     try {
         const { logID } = req.params;
@@ -265,7 +265,7 @@ app.get('/api/logs/:logID', async (req, res) => {
     }
 });
 
-// ADMIN ROUTES
+
 app.post('/api/admin/emergencyFreeze', async (req, res) => {
     try {
         const { reason } = req.body;
@@ -294,7 +294,7 @@ app.get('/api/admin/networkState', async (req, res) => {
     }
 });
 
-// IPFS ENDPOINTS
+
 const ipfsManager = require('./ipfsManager');
 const multer = require('multer');
 

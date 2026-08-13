@@ -1,6 +1,6 @@
 # Guide des Procédures TreeTracking v2.0
 
-## 🌲 1. ForestryAuthority (Autorité Forestière)
+## 1. ForestryAuthority (Autorité Forestière)
 
 ### Procédure complète de gestion d'une grume
 
@@ -29,7 +29,7 @@
 
 ---
 
-## 🪓 2. LoggingCompany (Entreprise Exploitante)
+## 2. LoggingCompany (Entreprise Exploitante)
 
 ### Procédure d'exploitation
 
@@ -58,7 +58,7 @@
 
 ---
 
-## 🏢 3. BuyingCompany (Entreprise Acheteuse)
+## 3. BuyingCompany (Entreprise Acheteuse)
 
 ### Procédure d'achat et transfert
 
@@ -84,7 +84,7 @@
 
 ---
 
-## 🔧 4. Admin (Administrateur Réseau)
+## 4. Admin (Administrateur Réseau)
 
 ### Gestion du réseau
 
@@ -112,7 +112,7 @@
 
 ---
 
-## 📊 Tests de bout en bout
+## Tests de bout en bout
 
 ### Scénario complet LOG007
 ```bash
@@ -191,7 +191,7 @@ curl -X POST http://localhost:3000/api/buying/transferOwnership \
 
 # Test 10: Vérifier historique complet
 curl http://localhost:3000/api/logs/LOG007
-🔍 Points de contrôle
+Points de contrôle
 ForestryAuthority
 
  Licence émise avec cubage correct
@@ -220,7 +220,7 @@ Admin
  Tous événements tracés
 
 
-📱 URLs importantes
+URLs importantes
 
 Home : http://localhost:3001
 ForestryAuthority : http://localhost:3001/dashboard/ForestryAuthorityMSP
@@ -231,7 +231,7 @@ API Health : http://localhost:3000/health
 IPFS Gateway : http://127.0.0.1:8080/ipfs/QmXXX...
 
 
-⚠️ Dépannage
+Dépannage
 IPFS ne fonctionne pas
 ipfs daemon &
 sleep 10
@@ -253,7 +253,7 @@ cd ~/treesystems
 docker ps  # Vérifier que tous les conteneurs tournent
 docker-compose restart
 
-📈 Améliorations futures suggérées
+Améliorations futures suggérées
 
 Vision par ordinateur : Reconnaissance automatique d'espèces
 GPS : Géolocalisation des grumes

@@ -1,0 +1,174 @@
+{
+  "name": "TreeTrackingNetwork",
+  "version": "1.0",
+  "caliper": {
+    "blockchain": "fabric"
+  },
+  "clients": {
+    "ForestryAuthorityMSP-User1": {
+      "client": {
+        "organization": "ForestryAuthorityMSP",
+        "credentialStore": {
+          "path": "/tmp/hfc-kvs/forestry",
+          "cryptoStore": {
+            "path": "/tmp/hfc-cvs/forestry"
+          }
+        },
+        "clientPrivateKey": {
+          "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/forestryauthority.treetracking.com/users/User1@forestryauthority.treetracking.com/msp/keystore/1abe67f477c28eafaf950a357b8eb9965f6a9ee2cef9118b893721532ebd80cf_sk"
+        },
+        "clientSignedCert": {
+          "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/forestryauthority.treetracking.com/users/User1@forestryauthority.treetracking.com/msp/signcerts/User1@forestryauthority.treetracking.com-cert.pem"
+        }
+      }
+    },
+    "LoggingCompaniesMSP-User1": {
+      "client": {
+        "organization": "LoggingCompaniesMSP",
+        "credentialStore": {
+          "path": "/tmp/hfc-kvs/logging",
+          "cryptoStore": {
+            "path": "/tmp/hfc-cvs/logging"
+          }
+        },
+        "clientPrivateKey": {
+          "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/loggingcompany.treetracking.com/users/User1@loggingcompany.treetracking.com/msp/keystore/3af335308b4d6e391600a3998125782dcaf477be98f43329c92c58596007b45f_sk"
+        },
+        "clientSignedCert": {
+          "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/loggingcompany.treetracking.com/users/User1@loggingcompany.treetracking.com/msp/signcerts/User1@loggingcompany.treetracking.com-cert.pem"
+        }
+      }
+    },
+    "BuyingCompaniesMSP-User1": {
+      "client": {
+        "organization": "BuyingCompaniesMSP",
+        "credentialStore": {
+          "path": "/tmp/hfc-kvs/buying",
+          "cryptoStore": {
+            "path": "/tmp/hfc-cvs/buying"
+          }
+        },
+        "clientPrivateKey": {
+          "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/buyingcompany.treetracking.com/users/User1@buyingcompany.treetracking.com/msp/keystore/eefb12bbe5f3c32ea13fc15b66fd51c87c5f723dea21ca08959611650e76a99e_sk"
+        },
+        "clientSignedCert": {
+          "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/buyingcompany.treetracking.com/users/User1@buyingcompany.treetracking.com/msp/signcerts/User1@buyingcompany.treetracking.com-cert.pem"
+        }
+      }
+    },
+    "TreeTrackingAdminMSP-User1": {
+      "client": {
+        "organization": "TreeTrackingAdminMSP",
+        "credentialStore": {
+          "path": "/tmp/hfc-kvs/admin",
+          "cryptoStore": {
+            "path": "/tmp/hfc-cvs/admin"
+          }
+        },
+        "clientPrivateKey": {
+          "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/admin.treetracking.com/users/User1@admin.treetracking.com/msp/keystore/04de59ac5039f5b67679826da614211c37d8fd8a77c79d675737fc981165d142_sk"
+        },
+        "clientSignedCert": {
+          "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/admin.treetracking.com/users/User1@admin.treetracking.com/msp/signcerts/User1@admin.treetracking.com-cert.pem"
+        }
+      }
+    }
+  },
+  "channels": {
+    "treetrackingchannel": {
+      "created": true,
+      "orderers": [
+        "orderer.treetracking.com"
+      ],
+      "peers": {
+        "peer0.admin.treetracking.com": {
+          "eventSource": true
+        },
+        "peer0.forestryauthority.treetracking.com": {
+          "eventSource": true
+        },
+        "peer0.loggingcompany.treetracking.com": {
+          "eventSource": true
+        },
+        "peer0.buyingcompany.treetracking.com": {
+          "eventSource": true
+        }
+      },
+      "contracts": [
+        {
+          "id": "treetracking",
+          "version": "2.0"
+        }
+      ]
+    }
+  },
+  "organizations": {
+    "TreeTrackingAdminMSP": {
+      "mspid": "TreeTrackingAdminMSP",
+      "peers": [
+        "peer0.admin.treetracking.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/admin.treetracking.com/users/Admin@admin.treetracking.com/msp/keystore/aa45106a8851f8ab0e6f28cdc7d3d38ea7771a3c561e96e3572e3b9b5b4bf9d5_sk"
+      },
+      "signedCert": {
+        "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/admin.treetracking.com/users/Admin@admin.treetracking.com/msp/signcerts/Admin@admin.treetracking.com-cert.pem"
+      }
+    },
+    "ForestryAuthorityMSP": {
+      "mspid": "ForestryAuthorityMSP",
+      "peers": [
+        "peer0.forestryauthority.treetracking.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/forestryauthority.treetracking.com/users/Admin@forestryauthority.treetracking.com/msp/keystore/33d43260d7acb2697dc49604e3d184c488cfc3df7539a8be09fb68c8cd0773fd_sk"
+      },
+      "signedCert": {
+        "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/forestryauthority.treetracking.com/users/Admin@forestryauthority.treetracking.com/msp/signcerts/Admin@forestryauthority.treetracking.com-cert.pem"
+      }
+    },
+    "LoggingCompaniesMSP": {
+      "mspid": "LoggingCompaniesMSP",
+      "peers": [
+        "peer0.loggingcompany.treetracking.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/loggingcompany.treetracking.com/users/Admin@loggingcompany.treetracking.com/msp/keystore/0078905b86771b94aff67403ce6a1d40701c10414a4407e2d4e057b3458f3f4e_sk"
+      },
+      "signedCert": {
+        "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/loggingcompany.treetracking.com/users/Admin@loggingcompany.treetracking.com/msp/signcerts/Admin@loggingcompany.treetracking.com-cert.pem"
+      }
+    },
+    "BuyingCompaniesMSP": {
+      "mspid": "BuyingCompaniesMSP",
+      "peers": [
+        "peer0.buyingcompany.treetracking.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/buyingcompany.treetracking.com/users/Admin@buyingcompany.treetracking.com/msp/keystore/99ae8638212edad98f57a08b1f64d790ce1920705c90aa867fe05eb9c76df624_sk"
+      },
+      "signedCert": {
+        "path": "/home/hamba/treesystems/crypto-config/peerOrganizations/buyingcompany.treetracking.com/users/Admin@buyingcompany.treetracking.com/msp/signcerts/Admin@buyingcompany.treetracking.com-cert.pem"
+      }
+    }
+  },
+  "orderers": {
+    "orderer.treetracking.com": {
+      "url": "grpc://localhost:7050"
+    }
+  },
+  "peers": {
+    "peer0.admin.treetracking.com": {
+      "url": "grpc://localhost:7051"
+    },
+    "peer0.forestryauthority.treetracking.com": {
+      "url": "grpc://localhost:9051"
+    },
+    "peer0.loggingcompany.treetracking.com": {
+      "url": "grpc://localhost:11051"
+    },
+    "peer0.buyingcompany.treetracking.com": {
+      "url": "grpc://localhost:13051"
+    }
+  }
+}

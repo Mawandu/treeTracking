@@ -12,7 +12,7 @@ import (
 type TreeTrackingChaincode struct {
 }
 
-// Structures identiques
+
 type TreeLog struct {
 	LogID           string           `json:"logID"`
 	Species         string           `json:"species"`
@@ -509,7 +509,7 @@ func main() {
 	}
 }
 
-// ============ NOUVELLES STRUCTURES ============
+
 
 type License struct {
 	LicenseID       string   `json:"licenseID"`
@@ -530,7 +530,7 @@ type NetworkState struct {
 	FrozenBy string `json:"frozenBy"`
 }
 
-// ============ FONCTIONS LICENSE ============
+
 
 func (t *TreeTrackingChaincode) IssueLicense(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	if len(args) != 4 {
@@ -581,7 +581,7 @@ func (t *TreeTrackingChaincode) GetLicense(stub shim.ChaincodeStubInterface, arg
 	return shim.Success(licenseBytes)
 }
 
-// ============ FONCTIONS TRANSFER ============
+
 
 func (t *TreeTrackingChaincode) TransferOwnership(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	if len(args) != 4 {
@@ -621,7 +621,7 @@ func (t *TreeTrackingChaincode) TransferOwnership(stub shim.ChaincodeStubInterfa
 	return putTreeLog(stub, treeLog)
 }
 
-// ============ FONCTIONS FREEZE ============
+
 
 func (t *TreeTrackingChaincode) EmergencyFreeze(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	if len(args) != 1 {

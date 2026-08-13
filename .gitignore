@@ -45,3 +45,13 @@ data/
 
 # IPFS data
 .ipfs/
+
+# Caliper benchmark logs
+caliper-workspace/*.log
+caliper-workspace/caliper.log
+
+# Binary archives
+*.tar.gz
+
+# Kubo binary
+kubo/
