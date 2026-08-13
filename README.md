@@ -95,6 +95,27 @@ cd treeTracking
 INITIALIZED -> PERMITTED -> HARVESTED -> TRANSPORTED -> SOLD
 ```
 
+## Tests
+```bash
+# Tests chaincode
+cd chaincode/treetracking
+go test -v
+
+# Tests API
+cd api-server
+npm test
+
+# Tests E2E
+./run-e2e-tests.sh
+```
+
+## Documentation
+
+- [Architecture Technique](docs/architecture.md)
+- [Guide API](docs/api-guide.md)
+- [Specifications Chaincode](docs/chaincode-specs.md)
+- [Glossaire](docs/glossaire.md)
+
 ## Securite
 
 - Blockchain privee et permissionnee
@@ -117,6 +138,7 @@ Projet academique - VNU International School
 ## Contact
 
 - GitHub: [@Mawandu](https://github.com/Mawandu)
+- Email: heritiermawandu@yahoo.fr
 
 ---
 
